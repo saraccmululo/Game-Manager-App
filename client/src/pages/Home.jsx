@@ -7,8 +7,11 @@ async function fetchGames() {
 }
 
 const Home = () => {
+  
   const { data, isLoading } = useQuery({ queryKey: ["games"], queryFn: fetchGames });
+
   if(isLoading) return <p>Loading games...</p>
+  
   return (
     <div className="page-container">
       <h1>My Games</h1>
