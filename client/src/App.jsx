@@ -1,13 +1,19 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import CreateGame from './pages/CreateGame'
 import UpdateGame from './pages/UpdateGame'
 import NotFound from './pages/NotFound'
 import NavBar from './components/NavBar'
+import { useThemeStore } from './store/useThemeStore'
 
 function App() {
-  
+  const{ theme } =useThemeStore();
+
+  useEffect(()=> {
+    document.documentElement.classList.remove("light-mode", "dark-mode")
+    document.documentElement.classList.add(`${theme}-mode`)
+  }, [theme])
 
   return (
     <div>
