@@ -1,8 +1,12 @@
 import GameList from "../components/GameList";
 import { useQuery } from "@tanstack/react-query";
 
+const BASE_URL = import.meta.env.MODE === 'development'
+  ? 'http://localhost:3000'
+  : 'https://game-manager-app.onrender.com';
+
 async function fetchGames() {
-  const response = await fetch("http://localhost:3000/api/games");
+  const response = await fetch(`${BASE_URL}/api/games`);
   return response.json();
 }
 
