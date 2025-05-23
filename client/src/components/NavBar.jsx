@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
-      <div className="navbar-title">My Game Site</div>
+      <div className="navbar-title">Game Collection Manager</div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/create">Add Game</Link>
@@ -18,7 +18,7 @@ const NavBar = () => {
             type="checkbox"
             onChange={toggleTheme}
             checked={isDarkMode}
-            aria-label="toggle Theme between light and dark mode"
+            aria-label="toggle theme between light and dark mode"
           />
           <span className="slider round"></span>
         </label>
