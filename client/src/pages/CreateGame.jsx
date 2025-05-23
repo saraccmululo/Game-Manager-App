@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import React from "react";
 
 const createGame = async (newGame) => {
   const response = await fetch("http://localhost:3000/api/games", {
